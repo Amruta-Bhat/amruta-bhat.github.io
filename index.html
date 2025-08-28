@@ -3,31 +3,37 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Amruta Bhat - Personal Website</title>
+  <title>Amruta Bhat</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
     <h1>Amruta Bhat</h1>
-    <p>Data Analytics | AI | Policy & Safety Evaluations</p>
+    <p>Data Analytics and Fun Projects!</p>
+    <a class="resume-btn" href="resume/resume.pdf" target="_blank">View Resume</a>
   </header>
 
-  <section>
-    <h2>Resume</h2>
-    <p><a href="resume/resume.pdf" target="_blank">Download my Resume (PDF)</a></p>
-  </section>
-
-  <section>
-    <h2>Fun Projects</h2>
-    <ul>
-      <li><a href="projects/project1/">Project 1: Single Player Yatzee Game</a></li>
-      <li><a href="projects/project2/">Project 2: NYT Wordle Solver</a></li>
-      <li><a href="projects/project3/">Project 3: NYT Spelling Bee Helper</a></li>
-    </ul>
-  </section>
+  <main>
+    <section class="projects">
+      <h2>Projects</h2>
+      <div class="project-cards">
+        <div class="card">
+          <h3>Single Player Yatzee Game</h3>
+          <p>Single player Yatzee game. Play the game with official yatzee rules.</p>
+          <a href="projects/fun_game_yatzee/index.html" target="_blank">View Project</a>
+        </div>
+		<div class="card">
+          <h3>Spelling Bee Helper</h3>
+          <p>This project serves as a Chrome Extension and helps with solving the NYT Spelling Bee. It will give the pangram for the day and list as many words as possible.
+		  The dictionary used is not the same as NYT. I have used the publically available Oxford dictionary dataset. This may have some errors.</p>
+          <a href="#" class = "disabled-link" target="_blank">View Project</a>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <footer>
-    <p>© 2025 Amruta Bhat | <a href="https://github.com/yourusername">GitHub</a></p>
+    <p>© 2025 Amruta Bhat</p>
   </footer>
 </body>
 </html>

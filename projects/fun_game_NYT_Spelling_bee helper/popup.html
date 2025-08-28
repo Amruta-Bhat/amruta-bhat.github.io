@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Spelling Bee Solver</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      width: 360px;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+    #letters {
+      font-weight: bold;
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+    #pangrams, #words {
+      max-height: 180px;
+      overflow-y: auto;
+      border: 1px solid #ccc;
+      padding: 6px;
+      background: #f9f9f9;
+      margin-bottom: 10px;
+      white-space: pre-wrap;
+      word-wrap: break-word;
+    }
+  </style>
+</head>
+<body>
+  <h2>Spelling Bee Solver</h2>
+  <div id="letters">Loading letters...</div>
+  <div><strong>Pangrams:</strong></div>
+  <div id="pangrams">Loading pangrams...</div>
+  <div><strong>Valid words:</strong></div>
+  <div id="words">Loading words...</div>
+  <script src="popup.js"></script>
+</body>
+</html>
