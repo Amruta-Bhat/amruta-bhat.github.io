@@ -1,0 +1,63 @@
+<head>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1 id="gameTitle">Yahtzee</h1>
+  <div id="game-container" style="display: flex; max-width: 900px; margin: auto; gap: 40px; align-items: flex-start;">
+    <!-- Left side: Dice and controls -->
+    <div id="left-panel" style="flex: 1;">
+      <div id="turnIndicator" class="new-turn" style="margin-bottom: 15px;">🎲 New Turn!</div>
+      <div id="dice" style="display: flex; gap: 10px;"></div>
+      <button id="rollBtn" style="margin-top: 20px;">Roll Dice</button>
+	  <br><br><br>
+	  <button id="newGameBtn" style="margin-top: 20px;">New Game</button>
+      <p>Rolls this turn: <span id="rollsLeft">3</span></p>
+	  <p><strong>🏆 High Score:</strong> <span id="highScore">0</span></p>
+
+	<div id="rules" style="margin-top: 20px; font-size: 0.95em; line-height: 1.4;">
+  <h3>How to Play</h3>
+  <ul style="padding-left: 20px;">
+    <li>Roll the dice up to 3 times per turn.</li>
+    <li>Click dice to hold them between rolls.</li>
+    <li>Select a category to assign your dice after rolling.</li>
+    <li>Each category can be used only once.</li>
+    <li>Score the best combinations to win!</li>
+    <li>Get 63+ points in upper section for a 35 point bonus.</li>
+    <li>Yahtzee = five of a kind (worth 50 points).</li>
+  </ul>
+</div>
+
+    </div>
+    <!-- Right side: Score chart -->
+    <div id="right-panel" style="flex: 1;">
+      <table id="scoreTable" style="width: 100%; border-collapse: collapse;">
+        <thead>
+          <tr>
+            <th style="border: 1px solid black; padding: 6px;">Category</th>
+            <th style="border: 1px solid black; padding: 6px;">Score</th>
+			<th style="border: 1px solid black; padding: 6px;">Dice State</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Aces (Ones)</td><td id="aces" style="border: 1px solid black; padding: 6px; cursor:pointer;">-</td><td id="aces-dice">-</td></tr>
+          <tr><td>Twos</td><td id="twos" style="border: 1px solid black; padding: 6px; cursor:pointer;">-</td><td id="twos-dice">-</td></tr>
+          <tr><td>Threes</td><td id="threes" style="border: 1px solid black; padding: 6px; cursor:pointer;">-</td><td id="threes-dice">-</td></tr>
+          <tr><td>Fours</td><td id="fours" style="border: 1px solid black; padding: 6px; cursor:pointer;">-</td><td id="fours-dice">-</td></tr>
+          <tr><td>Fives</td><td id="fives" style="border: 1px solid black; padding: 6px; cursor:pointer;">-</td><td id="fives-dice">-</td></tr>
+          <tr><td>Sixes</td><td id="sixes" style="border: 1px solid black; padding: 6px; cursor:pointer;">-</td><td id="sixes-dice">-</td></tr>
+          <tr><td><b>Upper Section Bonus</b></td><td id="bonus" style="border: 1px solid black; padding: 6px;">-</td><td id="bonus-dice"> </td></tr>
+          <tr><td>Three of a Kind</td><td id="threeKind" style="border: 1px solid black; padding: 6px; cursor:pointer;">-</td><td id="threeKind-dice">-</td></tr>
+          <tr><td>Four of a Kind</td><td id="fourKind" style="border: 1px solid black; padding: 6px; cursor:pointer;">-</td><td id="fourKind-dice">-</td></tr>
+          <tr><td>Full House</td><td id="fullHouse" style="border: 1px solid black; padding: 6px; cursor:pointer;">-</td><td id="fullHouse-dice">-</td></tr>
+          <tr><td>Small Straight</td><td id="smallStraight" style="border: 1px solid black; padding: 6px; cursor:pointer;">-</td><td id="smallStraight-dice">-</td></tr>
+          <tr><td>Large Straight</td><td id="largeStraight" style="border: 1px solid black; padding: 6px; cursor:pointer;">-</td><td id="largeStraight-dice">-</td></tr>
+          <tr><td style = "color:#FE2FC0;">Yahtzee!</td><td id="yahtzee" style="border: 1px solid black; padding: 6px; cursor:pointer;">-</td><td id="yahtzee-dice">-</td></tr>
+          <tr><td>Chance</td><td id="chance" style="border: 1px solid black; padding: 6px; cursor:pointer;">-</td><td id="chance-dice">-</td></tr>
+		  <tr><td><b>Total Score</b></td><td id="totalScore">0</td><td></td> <!-- Empty cell for the Dice State column --></tr>
+		</tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
